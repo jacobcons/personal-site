@@ -2,17 +2,17 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://jacobcons.github.io/blog/</loc>
+    <loc>https://jacobcons.com/blog/</loc>
     <lastmod>2024-05-08T14:45:18+01:00</lastmod>
   </url><url>
-    <loc>https://jacobcons.github.io/</loc>
+    <loc>https://jacobcons.com/</loc>
     <lastmod>2024-05-08T14:45:18+01:00</lastmod>
   </url><url>
-    <loc>https://jacobcons.github.io/blog/first-post/</loc>
+    <loc>https://jacobcons.com/blog/first-post/</loc>
     <lastmod>2024-05-08T14:45:18+01:00</lastmod>
   </url><url>
-    <loc>https://jacobcons.github.io/categories/</loc>
+    <loc>https://jacobcons.com/categories/</loc>
   </url><url>
-    <loc>https://jacobcons.github.io/tags/</loc>
+    <loc>https://jacobcons.com/tags/</loc>
   </url>
 </urlset>
