@@ -1,5 +1,5 @@
 theme = 'hugo-bearblog'
-baseURL = 'https://jacobcons.github.io/'
+baseURL = 'https://jacobcons.com'
 languageCode = 'en-us'
 title = 'Jacob Cons'
 
