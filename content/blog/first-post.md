@@ -1,7 +1,7 @@
 +++
 title = "Technical decisions whilst making Emote"
 date = "2024-05-08T14:45:18+01:00"
-description = "A writeup on my thoughts on the different decisions/tradeoffs I made whilst building a backend with Express.js"
+description = "A writeup on my thoughts on the different decisions/tradeoffs I made whilst building a backend with Express.js."
 
 tags = []
 +++
