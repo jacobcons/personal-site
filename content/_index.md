@@ -23,5 +23,5 @@ Therapy kitchen's jekyll static site
 
 # Links
 ### <a href="https://github.com/jacobcons" target="_blank">Github</a>
-### [Email](mailto:j@jacobcons.com)
+### [Email](mailto:jacobcons@gmail.com)
 

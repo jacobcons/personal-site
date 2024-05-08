@@ -6,7 +6,7 @@ description = "A writeup on my thoughts on the different decisions/tradeoffs I m
 tags = []
 +++
 
-I recently finished building the backend for [Emote](https://github.com/jacobcons/Emote), which is a social network site where you can 
+I recently finished building the backend for <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>, which is a social network site where you can 
 only post/comment using exclusively emojis. I fancied writing up some of my thoughts on the different decisions/tradeoffs I
 made along the way. 
 
