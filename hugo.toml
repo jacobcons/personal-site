@@ -1,0 +1,12 @@
+theme = 'hugo-bearblog'
+baseURL = 'https://example.org/'
+languageCode = 'en-us'
+title = 'Jacob Cons'
+
+[params]
+hideMadeWithLine = true
+
+[markup]
+[markup.goldmark]
+[markup.goldmark.renderer]
+unsafe = true
