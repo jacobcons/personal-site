@@ -3,10 +3,8 @@ title = 'Jacob Cons'
 +++
 
 # Hi
-My name's Jacob. I'm a backend developer who hates obfuscation and bloat.
-
-# Technolgies/Skills
-Javascript, Typescript, Node, Express.js, PostgreSQL, Docker, CI/CD, Python, HTML, CSS
+My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem building clean APIs.
+I like to keep things explicit and simple while avoiding too much magic/abstraction.
 
 # Projects
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
