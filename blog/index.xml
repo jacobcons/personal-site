@@ -10,9 +10,9 @@
     <atom:link href="https://jacobcons.com/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Technical decisions whilst making Emote</title>
-      <link>https://jacobcons.com/blog/first-post/</link>
+      <link>https://jacobcons.com/blog/technical-decisions-whilst-making-emote/</link>
       <pubDate>Wed, 08 May 2024 14:45:18 +0100</pubDate>
-      <guid>https://jacobcons.com/blog/first-post/</guid>
+      <guid>https://jacobcons.com/blog/technical-decisions-whilst-making-emote/</guid>
       <description>I recently finished building the backend for Emote, which is a social network site where you can only post/comment using exclusively emojis. I fancied writing up some of my thoughts on the different decisions/tradeoffs I made along the way.&#xA;SQL I used the query builder knex with most SQL just written raw with the occasional use of knex for dynamic queries when building it out gets ugly. I prefer writing raw sql since you don&amp;rsquo;t have to learn the quirks and syntax of different ORMs and can ensure you exactly know the sql being executed.</description>
     </item>
   </channel>
