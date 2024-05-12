@@ -11,7 +11,7 @@ I like to keep things explicit and simple, avoiding unnecessary magic/abstractio
 A social network site with a twist: you can only post/comment using exclusively emojis
 
 ## <a href="https://github.com/jacobcons/dfm-scraper" target="_blank">dfm-scraper</a>
-A Web scraper used to grab files used in maths tutoring
+A web scraper used to grab files used in maths tutoring
 
 ## <a href="https://github.com/jacobcons/airstream-studio" target="_blank">airstream-studio</a>
 Airstream studio's jekyll static site
