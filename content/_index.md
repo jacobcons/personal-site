@@ -4,7 +4,7 @@ title = 'Jacob Cons'
 
 # Hi
 My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem building clean APIs.
-I like to keep things explicit and simple while avoiding too much magic/abstraction.
+I like to keep things explicit and simple, avoiding unnecessary magic/abstraction.
 
 # Projects
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
