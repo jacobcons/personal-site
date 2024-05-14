@@ -1,7 +1,3 @@
-+++
-title = 'Jacob Cons'
-+++
-
 # Hi
 My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem building clean APIs.
 I like to keep things explicit and simple, avoiding unnecessary magic/abstraction.

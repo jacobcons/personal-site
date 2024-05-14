@@ -1,7 +1,7 @@
 theme = 'hugo-bearblog'
 baseURL = 'https://jacobcons.com'
 languageCode = 'en-us'
-title = 'Backend Developer'
+title = 'Jacob Cons'
 
 [params]
 hideMadeWithLine = true
