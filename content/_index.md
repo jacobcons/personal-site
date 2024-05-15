@@ -6,6 +6,12 @@ I like to keep things explicit and simple, avoiding unnecessary magic/abstractio
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
 A social network site with a twist: you can only post/comment using exclusively emojis
 
+## <a href="https://github.com/jacobcons/wallpaper-mate" target="_blank">wallpaper-mate</a>
+CLI tool used to fetch random wallpapers and set your desktop background to them
+
+## <a href="https://github.com/jacobcons/get-screen-resolution" target="_blank">get-screen-resolution</a>
+NPM package to get your screen's resolution
+
 ## <a href="https://github.com/jacobcons/dfm-scraper" target="_blank">dfm-scraper</a>
 A web scraper used to grab files used in maths tutoring
 
