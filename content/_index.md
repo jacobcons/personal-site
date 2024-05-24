@@ -5,9 +5,10 @@ Description = "Hi my name’s Jacob. I’m a backend developer who enjoys workin
 
 # Hi
 My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem building clean APIs.
-I like to keep things explicit and simple, avoiding unnecessary magic/abstraction.
+I like to keep code explicit and simple, avoiding unnecessary magic/abstraction.
 
-In my spare time I enjoy learning about music theory and writing songs with others using my guitar.
+In my spare time, not having the best musical ear, I have come to appreciate learning lots of music theory as a way
+to enable me to write pretty sounding things on the guitar.
 
 # Projects
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
