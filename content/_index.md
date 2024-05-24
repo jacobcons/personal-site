@@ -4,7 +4,7 @@ Description = "Hi my name’s Jacob. I’m a backend developer who enjoys workin
 
 
 # Hi
-My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem building clean APIs.
+My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem.
 I like to keep code explicit and simple, avoiding unnecessary magic/abstraction.
 
 In my spare time, not having the best musical ear, I have come to appreciate learning lots of music theory as a way
