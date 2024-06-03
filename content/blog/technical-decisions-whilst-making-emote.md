@@ -22,27 +22,18 @@ have to do further processing on the data at the application level. Overall, I'm
 more boilerplate if it gives me complete control over the SQL.
 
 ### Auth
-Using JWTs for auth sounded appealing due to less state and one less dependency in the form of
-redis for managing sessions. Unfortunately I later figured out that the token is valid until it
-expires and hence there's no way to instantly revoke a token. This is needed for example if you want to ban a user and prevent
-them from using your site until the token expires. Also, if a malicious actor gets a hold of it and uses it to log in; a
-password reset could be used to revoke the token and lock them out. There are remedies to this such as storing a blacklist
-of tokens or using refresh tokens, but these all reintroduce state and hence defeat the purpose of using JWTs in the first place.
-
-Since I had already implemented JWTs before realising this and the fact that this is a silly hobby project, I'm happy to
-stick with it for now but in the future I'll be going with a stateful solution.
-
-Also, on the topic of storing tokens in local storage vs an HttpOnly cookie. Yes with local storage it's vulnerable to
-XSS but this doesn't really matter since if you're comprised by XSS much worse can happen anyway, and using cookies
-leads to its own problems with CSRF.
-
-### Validation
-The request body, querystring and route params are all validated against Joi schemas using reusable middlewares which
-carry out the validation and pass control to the error handler if the data is in an invalid format.
+I used JWTs for auth because less state and one less dependency in the form of redis for managing sessions sounded
+appealing. The only downside I can see with them is there is no way to revoke tokens on demand. This could be useful, for example, 
+if a malicious actor got a hold of one. There are remedies to this such as storing a blacklist of tokens or
+using refresh tokens, but these all reintroduce state and hence defeat the purpose of using JWTs in the first place.
 
 ### Performance
-I wrote a script to seed the database with realistic data for over 1M rows which allowed me to EXPLAIN ANALYSE my more
-complex queries to make them as efficient as possible.
+I wrote a script to seed the database with realistic data for over 1M rows. This was useful to test the performance of some
+of my more complex queries which I then tweaked to make better.
+
+### Validation
+The request body, query and route params are all validated against Joi schemas using reusable middlewares which
+carry out the validation and pass control to the error handler if the data is in an invalid format.
 
 ### Error handling
 Objects with a status code and message are passed to my error handler for a variety of different http errors. Also thrown
