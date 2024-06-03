@@ -35,7 +35,7 @@
   <meta itemprop="description" content="A writeup on my thoughts on the different decisions/tradeoffs I made whilst building a backend with Express.js.">
   <meta itemprop="datePublished" content="2024-05-08T14:45:18+01:00">
   <meta itemprop="dateModified" content="2024-05-08T14:45:18+01:00">
-  <meta itemprop="wordCount" content="559">
+  <meta itemprop="wordCount" content="434">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -251,23 +251,16 @@ slightly complicated the ORM either generates inefficient SQL or it simply cant 
 have to do further processing on the data at the application level. Overall, I&rsquo;m far more happy having to write a bit
 more boilerplate if it gives me complete control over the SQL.</p>
 <h3 id="auth">Auth</h3>
-<p>Using JWTs for auth sounded appealing due to less state and one less dependency in the form of
-redis for managing sessions. Unfortunately I later figured out that the token is valid until it
-expires and hence there&rsquo;s no way to instantly revoke a token. This is needed for example if you want to ban a user and prevent
-them from using your site until the token expires. Also, if a malicious actor gets a hold of it and uses it to log in; a
-password reset could be used to revoke the token and lock them out. There are remedies to this such as storing a blacklist
-of tokens or using refresh tokens, but these all reintroduce state and hence defeat the purpose of using JWTs in the first place.</p>
-<p>Since I had already implemented JWTs before realising this and the fact that this is a silly hobby project, I&rsquo;m happy to
-stick with it for now but in the future I&rsquo;ll be going with a stateful solution.</p>
-<p>Also, on the topic of storing tokens in local storage vs an HttpOnly cookie. Yes with local storage it&rsquo;s vulnerable to
-XSS but this doesn&rsquo;t really matter since if you&rsquo;re comprised by XSS much worse can happen anyway, and using cookies
-leads to its own problems with CSRF.</p>
-<h3 id="validation">Validation</h3>
-<p>The request body, querystring and route params are all validated against Joi schemas using reusable middlewares which
-carry out the validation and pass control to the error handler if the data is in an invalid format.</p>
+<p>I used JWTs for auth because less state and one less dependency in the form of redis for managing sessions sounded
+appealing. The only downside I can see with them is there is no way to revoke tokens on demand. This could be useful, for example,
+if a malicious actor got a hold of one. There are remedies to this such as storing a blacklist of tokens or
+using refresh tokens, but these all reintroduce state and hence defeat the purpose of using JWTs in the first place.</p>
 <h3 id="performance">Performance</h3>
-<p>I wrote a script to seed the database with realistic data for over 1M rows which allowed me to EXPLAIN ANALYSE my more
-complex queries to make them as efficient as possible.</p>
+<p>I wrote a script to seed the database with realistic data for over 1M rows. This was useful to test the performance of some
+of my more complex queries which I then tweaked to make better.</p>
+<h3 id="validation">Validation</h3>
+<p>The request body, query and route params are all validated against Joi schemas using reusable middlewares which
+carry out the validation and pass control to the error handler if the data is in an invalid format.</p>
 <h3 id="error-handling">Error handling</h3>
 <p>Objects with a status code and message are passed to my error handler for a variety of different http errors. Also thrown
 errors are automatically passed to the error handler with the express-async-errors package, so I don&rsquo;t have to try/catch every
