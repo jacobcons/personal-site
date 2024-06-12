@@ -35,7 +35,7 @@
   <meta itemprop="description" content="A writeup on my thoughts on the different decisions/tradeoffs I made whilst building a backend with Express.js.">
   <meta itemprop="datePublished" content="2024-05-08T14:45:18+01:00">
   <meta itemprop="dateModified" content="2024-05-08T14:45:18+01:00">
-  <meta itemprop="wordCount" content="434">
+  <meta itemprop="wordCount" content="457">
 <meta name="referrer" content="no-referrer-when-downgrade" />
 
   <style>
@@ -262,9 +262,10 @@ of my more complex queries which I then tweaked to make better.</p>
 <p>The request body, query and route params are all validated against Joi schemas using reusable middlewares which
 carry out the validation and pass control to the error handler if the data is in an invalid format.</p>
 <h3 id="error-handling">Error handling</h3>
-<p>Objects with a status code and message are passed to my error handler for a variety of different http errors. Also thrown
-errors are automatically passed to the error handler with the express-async-errors package, so I don&rsquo;t have to try/catch every
-async await statement.</p>
+<p>Thrown errors are automatically passed to the error handler thanks to the express-async-errors package. Unexpectedly
+thrown errors are logged and responded with a generic 500 response, whereas intentional custom errors thrown by me respond
+with a custom status code and error message. This can occur for example if a friendship with a user is requested to be made
+but there is no incoming request from that user.</p>
 
 </content>
 <p>
