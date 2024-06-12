@@ -36,6 +36,7 @@ The request body, query and route params are all validated against Joi schemas u
 carry out the validation and pass control to the error handler if the data is in an invalid format.
 
 ### Error handling
-Objects with a status code and message are passed to my error handler for a variety of different http errors. Also thrown
-errors are automatically passed to the error handler with the express-async-errors package, so I don't have to try/catch every
-async await statement.
+Thrown errors are automatically passed to the error handler thanks to the express-async-errors package. Unexpectedly
+thrown errors are logged and responded with a generic 500 response, whereas intentional custom errors thrown by me respond
+with a custom status code and error message. This can occur for example if a friendship with a user is requested to be made
+but there is no incoming request from that user.
