@@ -11,8 +11,12 @@ In my spare time, not having the best musical ear, I have come to appreciate lea
 to enable me to write pretty sounding things on the guitar.
 
 # Projects
+
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
 A social network site with a twist: you can only post/comment using exclusively emojis
+
+## <a href="https://github.com/jacobcons/Countdown" target="_blank">Countdown</a>
+Struggle to get things done? With Countdown if you don't finish a task in time, we'll send out an embarrassing email to one of your contacts.
 
 ## <a href="https://github.com/jacobcons/wallpaper-mate" target="_blank">wallpaper-mate</a>
 A CLI tool that sets your desktop background to a random wallpaper fetched from a pool of over a million images
