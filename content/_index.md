@@ -4,7 +4,7 @@ Description = "Hi my name’s Jacob. I’m a backend developer who enjoys workin
 
 
 # Hi
-My name's Jacob. I'm a backend developer who dislikes too much obfuscation and magic
+My name's Jacob. I'm a backend developer who dislikes too much obfuscation/magic. You'll find me most at home when I'm working with Node or Go.
 
 In my spare time, not having the best musical ear, I have come to appreciate learning lots of music theory as a way
 to enable me to write pretty sounding things on the guitar.
