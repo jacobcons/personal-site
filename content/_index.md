@@ -4,8 +4,7 @@ Description = "Hi my name’s Jacob. I’m a backend developer who enjoys workin
 
 
 # Hi
-My name's Jacob. I'm a backend developer who enjoys working mainly in the Node ecosystem.
-I like to keep code explicit and simple, avoiding unnecessary magic/abstraction.
+My name's Jacob. I'm a backend developer who dislikes too much obfuscation and magic
 
 In my spare time, not having the best musical ear, I have come to appreciate learning lots of music theory as a way
 to enable me to write pretty sounding things on the guitar.
@@ -13,13 +12,13 @@ to enable me to write pretty sounding things on the guitar.
 # Projects
 
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
-A social network site with a twist: you can only post/comment using exclusively emojis
+A social network site with a twist: you can only post and comment using exclusively emojis (also includes an AI translator to convert plaintext into emojis)
 
 ## <a href="https://github.com/jacobcons/Countdown" target="_blank">Countdown</a>
-Struggle to get things done? With Countdown if you don't finish a task in time, we'll send out an embarrassing email to one of your contacts.
+Struggle to get things done? With Countdown if you don't finish a task in time, we'll send out an embarrassing message from your email account to one of your contacts
 
 ## <a href="https://github.com/jacobcons/wallpaper-mate" target="_blank">wallpaper-mate</a>
-A CLI tool that sets your desktop background to a random wallpaper fetched from a pool of over a million images
+A CLI tool that fetches wallpapers based on your preferences and sets them as your desktop background
 
 ## <a href="https://github.com/jacobcons/get-screen-resolution" target="_blank">get-screen-resolution</a>
 An NPM package to get your screen's resolution
