@@ -26,6 +26,9 @@ An NPM package to get your screen's resolution
 ## <a href="https://github.com/jacobcons/dfm-scraper" target="_blank">dfm-scraper</a>
 A web scraper for downloading maths tutoring resources
 
+## <a href="https://github.com/jacobcons/dfm-scraper" target="_blank">base64</a>
+A base64 encoder and decoder
+
 ## <a href="https://github.com/jacobcons/dfm-scraper" target="_blank">booking-api</a>
 A REST API that handles bookings
 
