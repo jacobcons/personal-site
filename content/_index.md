@@ -30,7 +30,7 @@ A web scraper for downloading maths tutoring resources
 A base64 encoder and decoder
 
 ## <a href="https://github.com/jacobcons/booking-api" target="_blank">booking-api</a>
-A REST API that handles bookings
+A REST API that handles bookings written in Go
 
 ## <a href="https://github.com/jacobcons/airstream-studio" target="_blank">airstream-studio</a>
 A static site built with Jekyll for Airstream Studio, a photo booth company
