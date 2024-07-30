@@ -26,8 +26,11 @@ An NPM package to get your screen's resolution
 ## <a href="https://github.com/jacobcons/dfm-scraper" target="_blank">dfm-scraper</a>
 A web scraper for downloading maths tutoring resources
 
+## <a href="https://github.com/jacobcons/data-structures-and-algorithms" target="_blank">data-structures-and-algorithms</a>
+Implementations of a bunch of common data structures written in Go
+
 ## <a href="https://github.com/jacobcons/base64" target="_blank">base64</a>
-A base64 encoder and decoder
+A base64 encoder and decoder written in Go
 
 ## <a href="https://github.com/jacobcons/booking-api" target="_blank">booking-api</a>
 A REST API that handles bookings written in Go
