@@ -35,6 +35,9 @@ A base64 encoder and decoder written in Go
 ## <a href="https://github.com/jacobcons/booking-api" target="_blank">booking-api</a>
 A REST API that handles bookings written in Go
 
+## <a href="https://github.com/jacobcons/whack-a-mole" target="_blank">whack-a-mole</a>
+A whack-a-mole game with a timer, sound and high score tracker written with Vue.js
+
 ## <a href="https://github.com/jacobcons/airstream-studio" target="_blank">airstream-studio</a>
 A static site built with Jekyll for Airstream Studio, a photo booth company
 
