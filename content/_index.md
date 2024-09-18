@@ -38,6 +38,9 @@ A REST API that handles bookings written in Go
 ## <a href="https://github.com/jacobcons/whack-a-mole" target="_blank">whack-a-mole</a>
 A whack-a-mole game with a timer, sound and high score tracker written with Vue.js
 
+## <a href="https://github.com/jacobcons/js-golf" target="_blank">js-golf</a>
+Me playing around with code golfing in JS
+
 ## <a href="https://github.com/jacobcons/airstream-studio" target="_blank">airstream-studio</a>
 A static site built with Jekyll for Airstream Studio, a photo booth company
 
