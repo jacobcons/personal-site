@@ -11,11 +11,14 @@ to enable me to write pretty sounding things on the guitar.
 
 # Projects
 
-## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
-A social network site with a twist: you can only post and comment using exclusively emojis (also includes an AI translator to convert plaintext into emojis)
+## <a href="https://github.com/jacobcons/word-tennis" target="_blank">word-tennis</a>
+A Multiplayer browser game in which users must type related words back and forth under timed pressure. For example 'wave' could be followed by 'ocean', 'crash', 'sine' etc...
 
 ## <a href="https://github.com/jacobcons/Countdown" target="_blank">Countdown</a>
 Struggle to get things done? With Countdown if you don't finish a task in time, we'll send out an embarrassing message from your email account to one of your contacts
+
+## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
+A social network site with a twist: you can only post and comment using exclusively emojis (also includes an AI translator to convert plaintext into emojis)
 
 ## <a href="https://github.com/jacobcons/wallpaper-mate" target="_blank">wallpaper-mate</a>
 A CLI tool that fetches wallpapers based on your preferences and sets them as your desktop background
