@@ -14,6 +14,9 @@ to enable me to write pretty sounding things on the guitar.
 ## <a href="https://github.com/jacobcons/word-tennis" target="_blank">word-tennis</a>
 A Multiplayer browser game in which users must type related words back and forth under timed pressure. For example 'wave' could be followed by 'ocean', 'crash', 'sine' etc...
 
+## <a href="https://github.com/jacobcons/did-donald-trump-really-tweet-that" target="_blank">did-donald-trump-really-tweet-that</a>
+A game where you must guess whether Donald Trump tweets are real or generated with ai
+
 ## <a href="https://github.com/jacobcons/Countdown" target="_blank">Countdown</a>
 Struggle to get things done? With Countdown if you don't finish a task in time, we'll send out an embarrassing message from your email account to one of your contacts
 
