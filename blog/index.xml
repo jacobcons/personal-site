@@ -6,8 +6,15 @@
     <description>Recent content in Blog on Jacob Cons</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Wed, 08 May 2024 14:45:18 +0100</lastBuildDate>
+    <lastBuildDate>Wed, 13 Nov 2024 12:10:22 +0000</lastBuildDate>
     <atom:link href="https://jacobcons.com/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Error Handling With Express.js and Typescript Made Easy</title>
+      <link>https://jacobcons.com/blog/error-handling-with-express.js-and-typescript-made-easy/</link>
+      <pubDate>Wed, 13 Nov 2024 12:10:22 +0000</pubDate>
+      <guid>https://jacobcons.com/blog/error-handling-with-express.js-and-typescript-made-easy/</guid>
+      <description>&lt;p&gt;A github repo is available with the completed code for the blog post &lt;a href=&#34;https://github.com/jacobcons/error-handling-blog-post-code&#34; target=&#34;_blank&#34;&gt;here&lt;/a&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;getting-started&#34;&gt;Getting Started&lt;/h3&gt;&#xA;&lt;p&gt;The below dependencies are required (note that a workaround will be provided later in the post if you&amp;rsquo;re using express 4).&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;npm i express@5.01&lt;/code&gt;&lt;/p&gt;&#xA;&lt;p&gt;&lt;code&gt;npm i -D @types/express&lt;/code&gt;&lt;/p&gt;&#xA;&lt;h3 id=&#34;dealing-with-errors-where-the-server-is-at-fault&#34;&gt;Dealing with errors where the server is at fault&lt;/h3&gt;&#xA;&lt;p&gt;For example sending an http request to a url that doesn&amp;rsquo;t exist, executing a malformed sql statement etc&amp;hellip;&lt;/p&gt;</description>
+    </item>
     <item>
       <title>Technical decisions whilst making Emote</title>
       <link>https://jacobcons.com/blog/technical-decisions-whilst-making-emote/</link>

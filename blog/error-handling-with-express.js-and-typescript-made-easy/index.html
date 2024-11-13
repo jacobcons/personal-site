@@ -1,0 +1,343 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta http-equiv="X-Clacks-Overhead" content="GNU Terry Pratchett" />
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Error Handling With Express.js and Typescript Made Easy | Jacob Cons</title>
+<meta name="title" content="Error Handling With Express.js and Typescript Made Easy" />
+<meta name="description" content="A github repo is available with the completed code for the blog post here
+Getting Started
+The below dependencies are required (note that a workaround will be provided later in the post if you&rsquo;re using express 4).
+npm i express@5.01
+npm i -D @types/express
+Dealing with errors where the server is at fault
+For example sending an http request to a url that doesn&rsquo;t exist, executing a malformed sql statement etc&hellip;" />
+<meta name="keywords" content="" />
+
+
+<meta property="og:url" content="https://jacobcons.com/blog/error-handling-with-express.js-and-typescript-made-easy/">
+  <meta property="og:site_name" content="Jacob Cons">
+  <meta property="og:title" content="Error Handling With Express.js and Typescript Made Easy">
+  <meta property="og:description" content="A github repo is available with the completed code for the blog post here
+Getting Started The below dependencies are required (note that a workaround will be provided later in the post if you’re using express 4).
+npm i express@5.01
+npm i -D @types/express
+Dealing with errors where the server is at fault For example sending an http request to a url that doesn’t exist, executing a malformed sql statement etc…">
+  <meta property="og:locale" content="en_us">
+  <meta property="og:type" content="article">
+    <meta property="article:section" content="blog">
+    <meta property="article:published_time" content="2024-11-13T12:10:22+00:00">
+    <meta property="article:modified_time" content="2024-11-13T12:10:22+00:00">
+
+
+
+
+  <meta name="twitter:card" content="summary">
+  <meta name="twitter:title" content="Error Handling With Express.js and Typescript Made Easy">
+  <meta name="twitter:description" content="A github repo is available with the completed code for the blog post here
+Getting Started The below dependencies are required (note that a workaround will be provided later in the post if you’re using express 4).
+npm i express@5.01
+npm i -D @types/express
+Dealing with errors where the server is at fault For example sending an http request to a url that doesn’t exist, executing a malformed sql statement etc…">
+
+
+
+
+  <meta itemprop="name" content="Error Handling With Express.js and Typescript Made Easy">
+  <meta itemprop="description" content="A github repo is available with the completed code for the blog post here
+Getting Started The below dependencies are required (note that a workaround will be provided later in the post if you’re using express 4).
+npm i express@5.01
+npm i -D @types/express
+Dealing with errors where the server is at fault For example sending an http request to a url that doesn’t exist, executing a malformed sql statement etc…">
+  <meta itemprop="datePublished" content="2024-11-13T12:10:22+00:00">
+  <meta itemprop="dateModified" content="2024-11-13T12:10:22+00:00">
+  <meta itemprop="wordCount" content="610">
+<meta name="referrer" content="no-referrer-when-downgrade" />
+
+  <style>
+  body {
+    font-family: Verdana, sans-serif;
+    margin: auto;
+    padding: 20px;
+    max-width: 720px;
+    text-align: left;
+    background-color: #fff;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.5;
+    color: #444;
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  strong,
+  b {
+    color: #222;
+  }
+
+  a {
+    color: #3273dc;
+     
+  }
+
+  .title {
+    text-decoration: none;
+    border: 0;
+  }
+
+  .title span {
+    font-weight: 400;
+  }
+
+  nav a {
+    margin-right: 10px;
+  }
+
+  textarea {
+    width: 100%;
+    font-size: 16px;
+  }
+
+  input {
+    font-size: 16px;
+  }
+
+  content {
+    line-height: 1.6;
+  }
+
+  table {
+    width: 100%;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  code {
+    padding: 2px 5px;
+    background-color: #f2f2f2;
+  }
+
+  pre code {
+    color: #222;
+    display: block;
+    padding: 20px;
+    white-space: pre-wrap;
+    font-size: 14px;
+    overflow-x: auto;
+  }
+
+  div.highlight pre {
+    background-color: initial;
+    color: initial;
+  }
+
+  div.highlight code {
+    background-color: unset;
+    color: unset;
+  }
+
+  blockquote {
+    border-left: 1px solid #999;
+    color: #222;
+    padding-left: 20px;
+    font-style: italic;
+  }
+
+  footer {
+    padding: 25px;
+    text-align: center;
+  }
+
+  .helptext {
+    color: #777;
+    font-size: small;
+  }
+
+  .errorlist {
+    color: #eba613;
+    font-size: small;
+  }
+
+   
+  ul.blog-posts {
+    list-style-type: none;
+    padding: unset;
+  }
+
+  ul.blog-posts li {
+    display: flex;
+  }
+
+  ul.blog-posts li span {
+    flex: 0 0 130px;
+  }
+
+  ul.blog-posts li a:visited {
+    color: #8b6fcb;
+  }
+
+  @media (prefers-color-scheme: dark) {
+    body {
+      background-color: #333;
+      color: #ddd;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6,
+    strong,
+    b {
+      color: #eee;
+    }
+
+    a {
+      color: #8cc2dd;
+    }
+
+    code {
+      background-color: #777;
+    }
+
+    pre code {
+      color: #ddd;
+    }
+
+    blockquote {
+      color: #ccc;
+    }
+
+    textarea,
+    input {
+      background-color: #252525;
+      color: #ddd;
+    }
+
+    .helptext {
+      color: #aaa;
+    }
+  }
+
+</style>
+
+</head>
+
+<body>
+  <header><a href="/" class="title">
+  <h2>Jacob Cons</h2>
+</a>
+<nav><a href="/">Home</a>
+
+
+<a href="/blog">Blog</a>
+
+</nav>
+</header>
+  <main>
+
+<h1>Error Handling With Express.js and Typescript Made Easy</h1>
+<p>
+  <i>
+    <time datetime='2024-11-13' pubdate>
+      13 Nov, 2024
+    </time>
+  </i>
+</p>
+
+<content>
+  <p>A github repo is available with the completed code for the blog post <a href="https://github.com/jacobcons/error-handling-blog-post-code" target="_blank">here</a></p>
+<h3 id="getting-started">Getting Started</h3>
+<p>The below dependencies are required (note that a workaround will be provided later in the post if you&rsquo;re using express 4).</p>
+<p><code>npm i express@5.01</code></p>
+<p><code>npm i -D @types/express</code></p>
+<h3 id="dealing-with-errors-where-the-server-is-at-fault">Dealing with errors where the server is at fault</h3>
+<p>For example sending an http request to a url that doesn&rsquo;t exist, executing a malformed sql statement etc&hellip;</p>
+<p>In these instances it&rsquo;s best to respond with a generic error message as to not give away server internals, with a status
+code of 500.</p>
+<p>Instead of wrapping lots of code in try/catch blocks and providing an http response in each one,
+we can leverage the fact that express passes control to a central error handling middleware when an error is thrown in a handler,
+in order to have a single place to handle these errors</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#39;/1&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>: <span style="color:#66d9ef">Request</span>, <span style="color:#a6e22e">res</span>: <span style="color:#66d9ef">Response</span>) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">// this will throw an error since the url doesn&#39;t exist
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#75715e">// the error handler below will be executed, being passed the thrown error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>  <span style="color:#66d9ef">await</span> <span style="color:#a6e22e">fetch</span>(<span style="color:#e6db74">&#39;https://iasfijefasd.com&#39;</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;success&#39;</span> })
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorHandler</span>: <span style="color:#66d9ef">ErrorRequestHandler</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#75715e">/*
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  we simply log the error so we can see what went wrong on the server and return a generic error message to the client
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  as to not expose how our server is working internally
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e">  */</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;something went wrong!&#39;</span> });
+</span></span><span style="display:flex;"><span>};
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#a6e22e">use</span>(<span style="color:#a6e22e">errorHandler</span>)
+</span></span></code></pre></div><p>Note that if you are using express 4, errors thrown by async code e.g. <code>await fetch('https://iasfijefasd.com')</code>
+will not automatically pass control to the error handler. To remedy this simply run <code>npm i express-async-errors</code> and include
+an import to it at the top of the file that acts as your entry point to your server <code>import 'express-async-errors'</code></p>
+<h3 id="dealing-with-errors-where-the-client-is-at-fault">Dealing with errors where the client is at fault</h3>
+<p>e.g. sending data in an invalid format, not having permissions to access the data etc&hellip;</p>
+<p>In these instances it&rsquo;s best to respond with a custom error message explaining what went wrong along with the correct status code.
+This is so the client understands what they did wrong on their end.</p>
+<p>We could simply respond with the message and status code we want directly in the handler, but this could get awkward when
+calling functions that are responsible for doing so. Instead we can simply throw a custom error with the message and status code which can also be handled
+by our error handling middleware:</p>
+<div class="highlight"><pre tabindex="0" style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4;"><code class="language-typescript" data-lang="typescript"><span style="display:flex;"><span><span style="color:#75715e">// contains status and message attributes
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span><span style="color:#66d9ef">class</span> <span style="color:#a6e22e">CustomError</span> <span style="color:#66d9ef">extends</span> Error {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">public</span> <span style="color:#a6e22e">status</span>: <span style="color:#66d9ef">number</span>
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">constructor</span>(<span style="color:#a6e22e">status</span>: <span style="color:#66d9ef">number</span>, <span style="color:#a6e22e">message</span>: <span style="color:#66d9ef">string</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">super</span>(<span style="color:#a6e22e">message</span>);
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">this</span>.<span style="color:#a6e22e">status</span> <span style="color:#f92672">=</span> <span style="color:#a6e22e">status</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>}
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#a6e22e">app</span>.<span style="color:#66d9ef">get</span>(<span style="color:#e6db74">&#39;/2&#39;</span>, <span style="color:#66d9ef">async</span> (<span style="color:#a6e22e">req</span>: <span style="color:#66d9ef">Request</span>, <span style="color:#a6e22e">res</span>: <span style="color:#66d9ef">Response</span>) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">const</span> <span style="color:#a6e22e">isValid</span> <span style="color:#f92672">=</span> <span style="color:#66d9ef">false</span>
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#f92672">!</span><span style="color:#a6e22e">isValid</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// throwing the error will pass control the the error handler
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#75715e">// this is a nice way to do it since functions you call inside this handler will also pass control to the error handler when they throw
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#66d9ef">throw</span> <span style="color:#66d9ef">new</span> <span style="color:#a6e22e">CustomError</span>(<span style="color:#ae81ff">400</span>, <span style="color:#e6db74">&#39;Invalid data!&#39;</span>)
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;success&#39;</span> })
+</span></span><span style="display:flex;"><span>})
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span><span style="color:#66d9ef">const</span> <span style="color:#a6e22e">errorHandler</span>: <span style="color:#66d9ef">ErrorRequestHandler</span> <span style="color:#f92672">=</span> (<span style="color:#a6e22e">err</span>, <span style="color:#a6e22e">req</span>, <span style="color:#a6e22e">res</span>, <span style="color:#a6e22e">next</span>) <span style="color:#f92672">=&gt;</span> {
+</span></span><span style="display:flex;"><span>  <span style="color:#66d9ef">if</span> (<span style="color:#a6e22e">err</span> <span style="color:#66d9ef">instanceof</span> <span style="color:#a6e22e">CustomError</span>) {
+</span></span><span style="display:flex;"><span>    <span style="color:#75715e">// respond with the status code and message of the custom error
+</span></span></span><span style="display:flex;"><span><span style="color:#75715e"></span>    <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#a6e22e">err</span>.<span style="color:#a6e22e">status</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span>: <span style="color:#66d9ef">err.message</span> })
+</span></span><span style="display:flex;"><span>    <span style="color:#66d9ef">return</span>
+</span></span><span style="display:flex;"><span>  }
+</span></span><span style="display:flex;"><span>
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">console</span>.<span style="color:#a6e22e">log</span>(<span style="color:#a6e22e">err</span>)
+</span></span><span style="display:flex;"><span>  <span style="color:#a6e22e">res</span>.<span style="color:#a6e22e">status</span>(<span style="color:#ae81ff">500</span>).<span style="color:#a6e22e">json</span>({ <span style="color:#a6e22e">message</span><span style="color:#f92672">:</span> <span style="color:#e6db74">&#39;something went wrong!&#39;</span> });
+</span></span><span style="display:flex;"><span>};
+</span></span></code></pre></div><p>This should be enough to get you going with error handling. Of course depending on your requirements, you might want to
+alter things e.g. custom error class taking in custom object to respond with, throwing named errors whose status code and
+response are dealt with in the error handler to separate concerns.</p>
+<p>Thanks for reading! If you have any questions, feel free to shoot over an email at <a href="mailto:j@jacobcons.com">j@jacobcons.com</a> :)</p>
+
+</content>
+<p>
+  
+</p>
+
+  </main>
+  <footer>
+</footer>
+
+    
+</body>
+
+</html>
