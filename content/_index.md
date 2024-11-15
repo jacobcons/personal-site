@@ -1,5 +1,5 @@
 +++
-Description = "My name's Jacob. I'm a backend developer who dislikes too much obfuscation/magic. You'll find me most at home when I'm working with Node or Go."
+Description = "Hi, my name's Jacob. I'm a backend developer who dislikes too much obfuscation/magic. You'll find me most at home when I'm working with Node or Go."
 +++
 
 
