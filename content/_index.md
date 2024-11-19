@@ -10,10 +10,10 @@ In my spare time, not having the best musical ear, I have come to appreciate lea
 to enable me to write pretty sounding things on the guitar.
 
 # Projects
-## <a href="https://github.com/jacobcons/did-donald-trump-really-tweet-that" target="_blank">did-donald-trump-really-tweet-that</a>
+## <a href="https://did-donald-trump-really-tweet-that.jacobcons.com/" target="_blank">did-donald-trump-really-tweet-that</a>
 A game where you must guess whether Donald Trump tweets are real or generated with ai
 
-## <a href="https://github.com/jacobcons/word-tennis" target="_blank">word-tennis</a>
+## <a href="https://word-tennis.jacobcons.com/" target="_blank">word-tennis</a>
 A Multiplayer browser game in which users must type related words back and forth under timed pressure. For example 'wave' could be followed by 'ocean', 'crash', 'sine' etc...
 
 ## <a href="https://github.com/jacobcons/Countdown" target="_blank">Countdown</a>
@@ -40,11 +40,11 @@ A base64 encoder and decoder written in Go
 ## <a href="https://github.com/jacobcons/booking-api" target="_blank">booking-api</a>
 A REST API that handles bookings written in Go
 
-## <a href="https://github.com/jacobcons/whack-a-mole" target="_blank">whack-a-mole</a>
-A whack-a-mole game with a timer, sound and high score tracker written with Vue.js
-
 ## <a href="https://github.com/jacobcons/js-golf" target="_blank">js-golf</a>
 Me playing around with code golfing in JS
+
+## <a href="https://github.com/jacobcons/whack-a-mole" target="_blank">whack-a-mole</a>
+A whack-a-mole game with a timer, sound and high score tracker written with Vue.js
 
 ## <a href="https://github.com/jacobcons/airstream-studio" target="_blank">airstream-studio</a>
 A static site built with Jekyll for Airstream Studio, a photo booth company
