@@ -53,6 +53,6 @@ A static site built with Jekyll for Airstream Studio, a photo booth company
 A static site built with Jekyll for Therapy Kitchen, a service that combines therapy with cookery
 
 # Links
+### [j@jacobcons.com](mailto:j@jacobcons.com)
 ### <a href="https://github.com/jacobcons" target="_blank">Github</a>
-### [Email](mailto:j@jacobcons.com)
-
+### <a href="https://bsky.app/profile/jacobcons.bsky.social" target="_blank">Bluesky</a>
