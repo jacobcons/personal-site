@@ -22,6 +22,9 @@ Struggle to get things done? With Countdown if you don't finish a task in time, 
 ## <a href="https://github.com/jacobcons/Emote" target="_blank">Emote</a>
 A social network site with a twist: you can only post and comment using exclusively emojis (also includes an AI translator to convert plaintext into emojis)
 
+## <a href="https://higher-or-lower-steam.jacobcons.com/" target="_blank">higher-or-lower-steam</a>
+A game where you guess between steam games as to which has more concurrent players
+
 ## <a href="https://github.com/jacobcons/wallpaper-mate" target="_blank">wallpaper-mate</a>
 A CLI tool that fetches wallpapers based on your preferences and sets them as your desktop background
 
