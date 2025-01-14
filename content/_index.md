@@ -11,7 +11,7 @@ to enable me to write pretty sounding things on the guitar.
 
 # Projects
 ## <a href="https://did-donald-trump-really-tweet-that.jacobcons.com/" target="_blank">did-donald-trump-really-tweet-that</a>
-A game where you must guess whether Donald Trump tweets are real or generated with ai
+A game where you have to guess whether Donald Trump tweets are real or generated with ai
 
 ## <a href="https://github.com/jacobcons/word-tennis" target="_blank">word-tennis</a>
 A multiplayer game in which users must type related words back and forth under timed pressure. For example, a round could go: apple -> computer -> mouse -> cheese -> holes -> pear (not related to "holes", so the round ends)
